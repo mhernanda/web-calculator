@@ -42,3 +42,16 @@ body {
     border: 1px solid black;
     font-size: 2em;
 }
+
+.operator,
+.equals,
+.negative {
+    background: orange;
+}
+
+.card {
+    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 30px;
+    margin-top: 20px;
+}
