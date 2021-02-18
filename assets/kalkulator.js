@@ -31,6 +31,29 @@ for(let button of buttons) {
         //mendapatkan objek elemen yang diklik
         const target = event.target;
 
+        if(target.classList.contains('clear')) {
+            clearCalculator();
+            updateDisplay();
+            return;
+        }
+
+        if(target.classList.contains('negative')) {
+            inverseNumber();
+            updateDisplay();
+            return;
+        }
+
+        if(target.classList.contains('equals')) {
+            performCalculation();
+            updateDisplay();
+            return;
+        }
+
+        if(target.classList.contains('operator')) {
+            handleOperator(target.innerText);
+            return;
+        }
+
         inputDigit(target.innerText);
         updateDisplay();
     });
